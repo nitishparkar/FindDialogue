@@ -1,0 +1,62 @@
+{% extends 'base.htm' %}
+
+  {% block body %}
+    {% if errormsg %}
+      <div class="alert alert-error">{{errormsg}}</div>
+    {% else %}
+      <link href="/stylesheets/callouts.css" rel="stylesheet">
+      <div class="navbar">
+        <h1 class="pull-left">
+          Season {{season}} Episode {{episode}}
+        </h1>
+        <h1 class="pull-right logo" 
+          style="color: #333333; cursor: pointer; line-height: 1;"
+          onclick="window.location='/';">Find Dialogue</h1>
+        <div class="clearfix"></div>
+        <h3>{{title}}</h3>
+      </div>
+
+      <br/>
+        {% set x = 0 %}
+        {% for line in transcript %}
+          <a name="{{line[0]}}"></a>
+          <!--<div class="well">
+            {{line[0]}} : {{line[1]}} says {{line[2]}} 
+          </div>-->
+          {% if line[1] == 'Scene' %}
+              <hr/>
+              <div class="well" style="text-align: center">
+                {{line[2]}}
+              </div>
+              {% set x = 0 %}
+          {% else %}
+            {% if x % 2 == 0 %}
+              <table width="100%">
+                <tr>
+                  <td width="10%">{{ line[1] | safe }}</td>
+                  <td width="90%">
+                    <div class="callout  border-callout" >
+                    <b class="leftnotch"></b>
+                      {{line[2]}}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            {% else %}
+              <table width="100%">
+                <tr>
+                  <td width="90%">
+                    <div class="callout  border-callout" style="text-align: right">
+                    <b class="rightnotch"></b>
+                      {{line[2]}}
+                    </div>
+                  </td>
+                  <td width="10%">{{ line[1] | safe }}</td>
+                </tr>
+              </table>
+            {% endif %}
+            {% set x= x+1 %}
+          {% endif %}
+        {% endfor %}
+    {% endif %}
+  {% endblock %}

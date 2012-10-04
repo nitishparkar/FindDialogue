@@ -1,0 +1,48 @@
+{% extends 'base.htm' %}
+
+  {% block body %}
+    <div>
+      <form method="GET" class="navbar-form well">
+        <input type="text" class="span3" name="q" value="{{query}}" /> 
+        <button type="submit" class="btn"><i class="icon-search"></i></button>
+        <a href="/"><button type="button" class="btn"><i class="icon-home"></i></button></a>
+        <h1 class="pull-right logo" style="cursor: pointer; line-height: 1; margin: 0;"
+          onclick="window.location='/';">Find Dialogue</h1>
+      </form>
+    </div>
+    {% if query %}
+      <div style="line-height: 3;"> 
+        Filtered Query: <b>{{filtered_query}}</b> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a id="question" class="badge" rel="popover" href="#" 
+            data-content="Numbers, punctuations and some common words are omitted for simplicity and performance" 
+            data-title="Filtered Query">?</a> 
+        <script>  
+          $(function ()  
+          { $("#question").popover();  
+          });  
+        </script>  
+      </div>
+    {% endif %}
+    <hr/>
+    <div>
+      {% if results %}
+        <div class="alert alert-info" style="width: 400px;">
+          <a class="close" data-dismiss="alert" href="#">&times;</a>
+          You can click on individual results to get the full transcript.
+        </div>
+        {% for result in results %}
+          {% set lineno = result[4] - 1 %}
+          <div class="well" style="cursor: pointer;"
+          onclick="window.location='/view?season={{result[0]}}&episode={{result[1]}}#{{lineno}}';">
+            <h3 style="line-height: 1; color: #666666;">Season {{result[0]}} Episode {{result[1]}} - {{result[2]}} 
+              <!--[{{result[4]}}), {{result[5]}}]--></h3>
+            {{result[3] | nl2br | mark_words(filtered_query) | safe}}
+          </div>
+        {% endfor %}
+      {% elif not query %}
+        <div class="alert alert-block"><b> Please enter a search term. </b></div>
+      {% else %}
+        <div class="alert alert-block"><b> No results found. </b></div>
+      {% endif %}
+    </div>
+  {% endblock %}

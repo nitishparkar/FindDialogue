@@ -1,0 +1,33 @@
+application: finddialogue
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /bootstrap
+  static_dir: bootstrap
+
+- url: /stylesheets
+  static_dir: css
+
+- url: /images
+  static_dir: img
+
+- url: .*
+  script: main.mappings
+
+libraries:
+- name: webapp2
+  version: latest
+
+- name: jinja2
+  version: latest
+
+builtins: 
+- remote_api: on
+

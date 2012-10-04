@@ -1,0 +1,14 @@
+{% extends 'base.htm' %}
+
+  {% block body %}
+    <!-- alignment fix from http://phrogz.net/CSS/vertical-align/index.html -->
+    <div style="position:absolute; top:50%; height:10em; margin-top:-5em; margin-left: 20em;">
+        <h1 class="logo" style="font-size: 300%;">Find Dialogue </h1>
+        <form method="GET" class="form-search" action="/search">
+          <br/>
+          <input type="text" class="span3" name="q"/> 
+          <button type="submit" class="btn"><i class="icon-search"></i></button>
+        </form>
+        try: <a href="/search?q=Darth+Vader+of+Pasadena">Darth Vader of Pasadena</a>
+    </div>
+  {% endblock %}

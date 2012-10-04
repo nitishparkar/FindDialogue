@@ -1,0 +1,1 @@
+python appcfg.py upload_data --config_file=bulkloader.yaml --filename=transcripts.csv --kind=BigBangTheory --url http://localhost:8081/_ah/remote_api

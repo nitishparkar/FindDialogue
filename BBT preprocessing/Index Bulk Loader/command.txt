@@ -1,0 +1,7 @@
+python appcfg.py upload_data --config_file=bulkloader.yaml --filename=search_index.csv --num_threads=4 --kind=BBTIndex --url http://localhost:8081/_ah/remote_api
+
+# num_threads can be removed while uploading to app engine datastore
+
+--num_threads=
+    The number of threads to spawn to upload new entities in parallel. The default is 10.
+

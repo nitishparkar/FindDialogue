@@ -1,0 +1,15 @@
+.rounded-box {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.pic-frame {
+	width: 80px;
+	height: 80px;
+}
+
+.logo {
+	font-family: 'Lato', sans-serif;
+}

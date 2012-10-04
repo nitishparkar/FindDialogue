@@ -1,0 +1,26 @@
+python_preamble:
+- import: google.appengine.api.datastore_types
+- import: google.appengine.ext.bulkload.transform
+- import: google.appengine.ext.db
+- import: re
+- import: base64
+
+transformers:
+- kind: BigBangTheory
+  connector: csv
+  connector_options: 
+    encoding: utf-8
+    columns: from_header
+    skip_import_header_row: True
+    import_options:
+      delimiter: ','
+  property_map:
+    - property: __key__
+      external_name: show
+      export_transform: transform.key_id_or_name_as_string
+    - property: title
+      external_name: title
+      import_transform: unicode
+    - property: transcript
+      external_name: transcript
+      import_transform: db.Text
