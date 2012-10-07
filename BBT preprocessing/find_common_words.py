@@ -7,11 +7,13 @@ import time
 from csv_unicode import *
 from directories import *
 
+
 """
   This script identifies words that occur more than 500 times 
   throughout the series and puts them in a file
   (modified version of index_to_csv.py )
 """
+
 
 class IndexBuilder():
     """ Generates search index from transcripts """

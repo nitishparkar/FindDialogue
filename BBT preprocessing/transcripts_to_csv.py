@@ -7,6 +7,7 @@ import time
 from csv_unicode import *
 from directories import *
 
+
 """
   This script generates a csv file of transcripts 
   required by the GAE bulkloader

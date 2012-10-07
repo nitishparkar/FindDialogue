@@ -7,6 +7,7 @@ import time
 from csv_unicode import *
 from directories import *
 
+
 """
   This script generates search index from transcripts and
   writes it to a csv file required by the GAE bulkloader

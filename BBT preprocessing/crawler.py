@@ -4,11 +4,13 @@ import codecs
 from bs4 import BeautifulSoup
 from directories import *
 
+
 """
   This script fetches all the episodes of Big Bang Theory from
  	http://bigbangtrans.wordpress.com/
   and puts them in a directory
 """
+
 
 def put_in_file(content):
 	""" Put fetched transcript in a file """
