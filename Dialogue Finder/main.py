@@ -242,6 +242,12 @@ class ViewHandler(webapp2.RequestHandler):
             return '<img src="/images/bernadette.jpg" alt="Bernadette" class="rounded-box pic-frame" />'
         elif 'amy' in character.lower():
             return '<img src="/images/amy.jpg" alt="Amy" class="rounded-box pic-frame" />'
+        elif 'priya' in character.lower():
+            return '<img src="/images/priya.jpg" alt="Priya" class="rounded-box pic-frame" />'
+        elif 'stuart' in character.lower():
+            return '<img src="/images/stuart.jpg" alt="Stuart" class="rounded-box pic-frame" />'
+        elif 'leslie' in character.lower():
+            return '<img src="/images/leslie.jpg" alt="Leslie" class="rounded-box pic-frame" />'
         elif 'zack' in character.lower():
             return '<img src="/images/zack.jpg" alt="Zack" class="rounded-box pic-frame" />'
         else:
