@@ -1,0 +1,9 @@
+cron:
+
+- description: app jivant thevnyasathi 2
+  url: /knockknock
+  schedule: every 7 minutes
+
+- description: app jivant thevnyasathi 3
+  url: /knockknock
+  schedule: every 11 minutes

@@ -10,6 +10,8 @@ import re
 from google.appengine.api import memcache
 from models import *
 
+# runs in debug mode only on dev server
+DEBUG = os.environ['SERVER_SOFTWARE'].startswith('Dev')
 
 """ Jinja2 """
 jinja_environment = jinja2.Environment(autoescape=True,
@@ -300,6 +302,12 @@ class ViewHandler(webapp2.RequestHandler):
         self.my_renderer(season=season, episode=episode, title=title, transcript=processed_transcript)
 
 
+class KnockHandler(webapp2.RequestHandler):
+    """ Shhhh! Secret """
+    def get(self):
+        self.response.out.write(self.request)
+
+
 class UnexpectedErrorHandler(webapp2.RequestHandler):
     """ unused """
     def get(self):
@@ -317,7 +325,8 @@ class Custom404(webapp2.RequestHandler):
 mappings = webapp2.WSGIApplication([('/', HomeHandler),
                                 ('/search', SearchHandler),
                                 ('/view', ViewHandler),
+                                ('/knockknock', KnockHandler),
                                 ('/error', UnexpectedErrorHandler)],
                                 #('/(.+)', Custom404)], 
-                                debug = True)
+                                debug = DEBUG)
 
