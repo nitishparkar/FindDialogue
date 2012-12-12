@@ -52,7 +52,7 @@ def main():
     iterate_parse_directory() # content lines
     f_csv.close()
     
-    print "Index exported to transcripts2.csv"
+    print "Index exported to transcripts.csv"
     print "Completed in ", float(time.time() - start_time), " seconds!"
 
 if __name__ == '__main__':
