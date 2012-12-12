@@ -1,7 +1,8 @@
 Find Dialogue is a web application that lets you search the transcripts of Big Bang Theory (season 1-5). For more details visit GitHub page (http://nitishsp.github.com/FindDialogue/) or the application (http://finddialogue.appspot.com/)
 
 
-# Setup:
+Setup
+=======
 
 ## Install Dependencies:
 
@@ -22,7 +23,7 @@ Find Dialogue is a web application that lets you search the transcripts of Big B
     python index_to_csv.py
 
 
-##Bulkupload:
+## Bulkupload:
 
   Use the bulkloader.yaml and csv files to upload data to development or production datastore using [GAE bulkloader] 
 (https://developers.google.com/appengine/docs/python/tools/uploadingdata).
