@@ -6,7 +6,7 @@ Setup
 
 ## Install Dependencies:
 
-[Beautiful soup] (http://www.crummy.com/software/BeautifulSoup/#Download)
+[Beautiful soup](http://www.crummy.com/software/BeautifulSoup/#Download)
 
 
 ## Fetch Transcripts:
@@ -25,6 +25,5 @@ Setup
 
 ## Bulkupload:
 
-  Use the bulkloader.yaml and csv files to upload data to development or production datastore using [GAE bulkloader] 
-(https://developers.google.com/appengine/docs/python/tools/uploadingdata).
+  Use the bulkloader.yaml and csv files to upload data to development or production datastore using [GAE bulkloader](https://developers.google.com/appengine/docs/python/tools/uploadingdata).
 You may find command.txt in Index Bulk Loader and Transcipt Bulk Loader helpful. Bulkloading search index takes a while (~20-30min).
