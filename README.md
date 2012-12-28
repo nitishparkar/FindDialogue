@@ -35,3 +35,4 @@ You may find command.txt in Index Bulk Loader and Transcipt Bulk Loader helpful.
 ## Launch Application
 
 Point App Engine Launcher to the Dialogue Finder directory to run/deploy the application
+
