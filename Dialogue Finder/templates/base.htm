@@ -5,9 +5,9 @@
         <title> Dialogue Finder </title>
         <link href="http://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet" type="text/css">
         <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="/stylesheets/totop.css" rel="stylesheet" type="text/css">
         <link href="/stylesheets/custom.css" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
         <script src="/bootstrap/js/bootstrap.min.js"></script>
         <!--{% block internalcss %}{% endblock %}-->
     </head>
@@ -35,28 +35,27 @@
         -->
         <div id="toTop">^ Back to Top</div>
         <script type="text/javascript">
-            $(function() {
+            $(document).ready(function() {
+
                 $(window).scroll(function() {
                     if($(this).scrollTop() != 0) {
                         $('#toTop').fadeIn();
                     } else {
                         $('#toTop').fadeOut();
                     }
+                });
+
+                $('#toTop').click(function() {
+                    $('body,html').animate({scrollTop:0},800);
+                });
+
+                $("#tooltip").tooltip();
+
+                $("#question").popover();
             });
 
-            $('#toTop').click(function() {
-                $('body,html').animate({scrollTop:0},800);
-            });
-
-            $(function ()
-              { $("#tooltip").tooltip();
-              });
-            });
-
-
-
-            {% block javascript %}
-            {% endblock %}
+            // {% block javascript %}
+            // {% endblock %}
         </script>
     </body>
 </html>

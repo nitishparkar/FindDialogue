@@ -4,12 +4,11 @@
     {% if errormsg %}
       <div class="alert alert-error">{{errormsg}}</div>
     {% else %}
-      <link href="/stylesheets/callouts.css" rel="stylesheet">
       <div class="navbar">
         <h1 class="pull-left">
           Season {{season}} Episode {{episode}}
         </h1>
-        <h1 class="pull-right logo" 
+        <h1 class="pull-right logo"
           style="color: #333333; cursor: pointer; line-height: 1;"
           onclick="window.location='/';">Find Dialogue</h1>
         <div class="clearfix"></div>
@@ -20,9 +19,6 @@
         {% set x = 0 %}
         {% for line in transcript %}
           <a name="{{line[0]}}"></a>
-          <!--<div class="well">
-            {{line[0]}} : {{line[1]}} says {{line[2]}} 
-          </div>-->
           {% if line[1] == 'Scene' %}
               <hr/>
               <div class="well" style="text-align: center">

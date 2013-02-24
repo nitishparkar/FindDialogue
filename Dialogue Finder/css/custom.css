@@ -17,3 +17,95 @@
 a:hover {
     text-decoration: none;
 }
+
+.result-block:hover {
+  opacity: 1;
+
+  -webkit-box-shadow: 0px 0px 5px rgba(50,50,50,0.8);
+  -moz-box-shadow: 0px 0px 5px rgba(50,50,50,0.8); box-shadow: 0px 0px 20px rgba(50,50,50,0.8);
+}
+
+/* To top button */
+#toTop {
+    width:100px;
+    border:1px solid #ccc;
+    background:#f7f7f7;
+    text-align:center;
+    padding:5px;
+    position:fixed; /* this is the magic */
+    bottom:50px; /* together with this to put the div at the bottom*/
+    right:10px;
+    cursor:pointer;
+    display:none;
+    color:#333;
+    font-family:verdana;
+    font-size:11px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+/* Conversation Callouts */
+
+.callout {
+    position: relative;
+    margin: 18px 15px;
+    padding: 18px 18px;
+    background-color: #eef4f9;
+    /* easy rounded corners for modern browsers */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.callout .notch {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    margin: 20;
+    border-top: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #eef4f9;
+    padding: 0;
+    width: 0;
+    height: 0;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+}
+
+.callout .leftnotch {
+    position: absolute;
+    left: -10px;
+    border-top: 10px solid transparent;
+    border-left: 0;
+    border-right: 10px solid #eef4f9;
+    border-bottom: 10px solid transparent;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+     /* ie6 transparent fix */
+    _border-right-color: pink;
+    _border-left-color: pink;
+    _filter: chroma(color=pink);
+}
+
+.callout .rightnotch {
+    position: absolute;
+    right: -10px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #eef4f9;
+    border-right: 0;
+    border-bottom: 10px solid transparent;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+     /* ie6 transparent fix */
+    _border-right-color: pink;
+    _border-left-color: pink;
+    _filter: chroma(color=pink);
+}
+
+.border-callout { border: 1px solid #c5d9e8; padding: 17px 19px; }

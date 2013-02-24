@@ -18,6 +18,8 @@ Setup
 
     python parser.py
 
+Delete 6th season transcripts from fetched_content directory if crawler.py fails
+[Issue](https://github.com/nitishsp/FindDialogue/issues/1)
 
 ## Generate csv files
 
