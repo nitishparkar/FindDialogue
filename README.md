@@ -1,7 +1,7 @@
 Find Dialogue
 =============
 
-Find Dialogue is a web application that lets you search the transcripts of Big Bang Theory (season 1-5). For more details visit [GitHub page](http://nitishsp.github.com/FindDialogue/) or [the application](http://finddialogue.appspot.com/).
+Find Dialogue is a web application that lets you search the transcripts of Big Bang Theory (season 1-5). For more details visit [GitHub page](http://nitishparkar.github.com/FindDialogue/) or [the application](http://finddialogue.appspot.com/).
 
 
 Setup
@@ -19,7 +19,7 @@ Setup
     python parser.py
 
 Remove 6th season's transcripts from fetched_content directory if crawler.py fails
-[Issue](https://github.com/nitishsp/FindDialogue/issues/1)
+[Issue](https://github.com/nitishparkar/FindDialogue/issues/1)
 
 ## Generate csv files
 
